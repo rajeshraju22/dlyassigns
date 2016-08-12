@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <button onclick="myfunction()">click here</button>
+    <p id="min"></p>
+    <p id="max"></p>
+    <script>
+        function myfunction()
+        {
+            document.getElementById("min").innerHTML = Math.max(19999, 199999999)
+            document.getElementById("max").innerHTML = Math.min(1999, 199)
+        }
+
+    </script>
+</body>
+</html>
