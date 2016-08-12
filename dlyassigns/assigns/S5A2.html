@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>click the button to display hours and minutes.</p>
+
+    <button onclick="myfunction()">check it</button>
+
+    <p id="clock"></p>
+    <script>
+
+        function addzero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+
+            return i;
+        }
+
+
+        function myfunction() {
+
+            var d = new Date();
+
+            var x = document.getElementById("clock");
+            var h = addzero(d.getHours());
+            var m = addzero(d.getMinutes());
+            x.innerHTML = h + ":" + m + ":";
+
+        }
+    </script>
+
+</body>
+</html>
