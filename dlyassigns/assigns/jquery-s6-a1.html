@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+    <p>Click me!</p>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $("p").bind("click", function () {
+                $("<p>this is a click event</p>").appendTo("body");
+
+            });
+        });
+        $("p").bind("dblclick",function ()
+        {
+            $("<p>this is a double click</P>").appendTo("body");
+        });
+    </script>
+</body>
+</html>
