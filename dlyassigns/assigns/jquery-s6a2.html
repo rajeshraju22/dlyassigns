@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.12.3.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <input id="field1" type="text" value="Field 1">
+        <input id="field2" type="text" value="Field 2">
+    </form>
+    <script>
+        $(document).ready(function ()
+        {
+            $("input").blur(function ()
+            {
+                alert("This input field has lost its focus.");
+            });
+        });
+    </script>
+</body>
+
+</html>
