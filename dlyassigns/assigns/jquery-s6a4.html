@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>changing color</title>
+    <script src="../Scripts/jquery-1.12.3.min.js"></script>
+
+</head>
+<body>
+    <div style="background-color:yellow">
+        <p>Click the button to change the background color of this paragraph.</p>
+        <button>Click me!</button>
+    </div>
+    <script>
+        $(document).ready(function ()
+        {
+            $("div").on("click", "button",function(event)
+            {
+                $(event.delegateTarget).css("background-color", "skyblue");
+            });
+        });
+    </script>
+</body>
+</html>
