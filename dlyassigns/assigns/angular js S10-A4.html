@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>angular js</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", []);
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.myname ="rajesh"
+        });
+        module.controller("mycontroller2", function ($scope) {
+            $scope.myhost = "karthik"
+        });
+    </script>
+    <div ng-controller="mycontroller">
+        my name is {{myname}} 
+        <div ng-controller="mycontroller2">
+            my trainer  is {{myhost}}
+
+        </div>
+
+      
+    </div>
+</body>
+</html>
