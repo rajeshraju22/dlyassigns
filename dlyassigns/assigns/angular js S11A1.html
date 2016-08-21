@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ANGULAR JS</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", [])
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.name = "rajesh"
+            $scope.empid = "669400"
+            $scope.Designation="web developer"
+        });
+    </script>
+    <div ng-controller="mycontroller">
+        name:<input ng-model="name" />
+        empid:<input ng-model="empid" />
+        Designation:<input ng-model="Designation" />
+
+        <h1>name: {{name}}</h1>
+        <h2>empid: {{empid}}</h2>
+        <h3>Designation: {{Designation}}</h3>
+    </div>
+
+</body>
+</html>
+
