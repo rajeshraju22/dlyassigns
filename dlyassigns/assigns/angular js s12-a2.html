@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>reduced the numbers</title>
+    <script src="angular.js"></script>
+
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", [])
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.number = ""
+        });
+    </script>
+    <h1>{{10.189325|number:2}}</h1>
+
+</body>
+</html>
