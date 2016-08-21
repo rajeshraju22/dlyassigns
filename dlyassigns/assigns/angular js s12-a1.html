@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pesone details</title>
+    <script src="angular.js"></script>
+
+</head>
+<body ng-app="myapp">
+        <script>
+            var module = angular.module("myapp", [])
+            module.controller("mycontroller", function ($scope)
+            {
+                $scope.firstname = "rajesh"
+                $scope.secondname = "raju"
+                $scope.lastname = "muppala"
+            });
+        </script>
+    <div ng-controller="mycontroller">
+        <p>
+            the firstname is {{firstname|uppercase}}
+            the secondname is {{secondname|uppercase}}
+            and also lastname is {{lastname|uppercase}} using uppercase
+        </p>
+
+    </div>
+
+</body>
+</html>
