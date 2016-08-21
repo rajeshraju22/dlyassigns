@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ANGULAR JS ATTRIBUTS</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", [])
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.message="hello to acadgild"
+        });
+    </script>
+    <div ng-controller="mycontroller">
+        <h1 ng-bind="message"></h1>
+    </div>
+
+</body>
+</html>
