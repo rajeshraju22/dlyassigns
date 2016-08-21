@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sorting filters</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", [])
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.customers =
+                [
+                  { "name": "Bottom-Dollar Marketse", "city": "Tsawassen" },
+                  { "name": "Alfreds Futterkiste", "city": "Berlin" },
+                  { "name": "Bon app", "city": "Marseille" },
+                  { "name": "Cactus Comidas para llevar", "city": "Buenos Aires" },
+                  { "name": "Bolido Comidas preparadas", "city": "Madrid" },
+                  { "name": "Around the Horn", "city": "London" },
+                  { "name": "B's Beverages", "city": "London" }
+                ];
+        });
+    </script>
+    <div ng-controller="mycontroller">
+        <ul>
+            <li ng-repeat="x in customers | orderBy :   'city' ">
+                {{ x . name  + " , " + x . city }}
+            </li>
+        </ul>
+       <h1><p > <center>the ARRAY items are SORTED by "city" in this assignment</center></p></h1>
+
+    </div>
+
+</body>
+</html>
