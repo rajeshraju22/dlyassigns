@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>angularjs</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="myapp">
+    <script>
+        var module = angular.module("myapp", [])
+        module.controller("mycontroller", function ($scope)
+        {
+            $scope.firstname = "rajesh"
+            $scope.lastname ="raju"
+        });
+    </script>
+    <div ng-controller="mycontroller" >
+        firstname:
+        <input type="text" value="firstname" ng-model="firstname"/><br/><br />
+        lastname:
+        <input type="text" value="firstname" ng-model="lastname" /><br /><br />
+        <input type="button" value="clik here" />
+        <hr/>
+        <style>
+           
+        {
+        border-collapse: collapse;
+        }
+
+        table, td, th 
+        {
+        border: 1px solid black;
+        }
+        </style>
+        <table>
+            <tr>
+                <th>firstname</th>
+                <th>lastname</th>
+            </tr>
+            <tr>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+            </tr>
+            <tr>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
